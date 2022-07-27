@@ -2,32 +2,42 @@ package ru.synergy.constructorTest;
 
 public class Person {
 
-    String name;
-    protected int age;
-    public String address;
-    private String phone;
+    int id;
+    private String name;
+    private int age;
+    public static int counter = 0;
 
-    public Person(String name, int age, String adress, String phone) {
+    public Person(int id,String name, int age) {
         this.name = name;
         this.age = age;
-        this.address = adress;
-        this.phone = phone;
+        this.id = id;
+        counter++;
     }
 
-    public void displayName(){
-        System.out.printf("Name %s \n", name);
+    public static int getCounter() {
+        return counter;
     }
 
-    void displayAge(){
-        System.out.printf("Age %s \n", age);
+    public String getName() {
+        return name;
     }
 
-    private void displayAddress(){
-        System.out.printf("Address %s \n", address);
+    public void setName(String name) {
+        this.name = name;
     }
 
-    protected void displayPhone(){
-        System.out.printf("Phone %s \n", phone);
+    public int getAge() {
+        return age;
     }
 
+    public void setAge(int age) {
+        if(age > 0 && age < 110)
+        this.age = age;
+    }
+
+
+    @Override
+    public String toString() {
+        return  id + " " + name +" " + age;
+    }
 }
