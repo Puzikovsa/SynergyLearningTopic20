@@ -11,6 +11,11 @@ public class Main {
         System.out.println(person3);
         System.out.println(person1);
         System.out.println(Person.getCounter());
+
+        Fraction fraction = new Fraction(1, 0);
+        System.out.println(fraction);
+        Fraction fraction1 = new Fraction(2, 20);
+        System.out.println(fraction1);
     }
 
 }

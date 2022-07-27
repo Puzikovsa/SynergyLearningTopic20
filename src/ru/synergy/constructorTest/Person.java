@@ -41,3 +41,27 @@ public class Person {
         return  id + " " + name +" " + age;
     }
 }
+
+class Fraction{
+    int numerator;
+    int denominator;
+
+    public Fraction(int numerator, int denominator){
+        if (denominator == 0){
+            System.out.println("denominator can't bee zero");
+            return;
+        }
+
+        this.numerator = numerator;
+        this.denominator = denominator;
+    }
+
+    @Override
+    public String toString() {
+        if (denominator == 0){
+            return "Несуществующая дробь";
+        } else
+        return "Fraction = " + numerator + " / "
+                + denominator;
+    }
+}
